@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.ose4g.rickmortyzuri.adapters.CharacterListAdapter
 import com.ose4g.rickmortyzuri.databinding.ActivityMainBinding
 import kotlinx.coroutines.flow.collectLatest
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val pagingAdapter = CharacterListAdapter(context)
         binding.characterList.let {
             it.adapter = pagingAdapter
-            it.layoutManager = GridLayoutManager(context,2)
+            it.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
             it.setHasFixedSize(true)
         }
 

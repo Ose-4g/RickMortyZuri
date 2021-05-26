@@ -7,6 +7,7 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.ose4g.rickmortyzuri.R
 import com.ose4g.rickmortyzuri.databinding.CharacterListItemBinding
 import com.ose4g.rickmortyzuri.models.Result
 
@@ -21,6 +22,9 @@ class CharacterListAdapter(val context: Context):
             Glide.with(context)
                 .load(character.image!!)
                 .into(binding.image)
+            binding.name.text = context.getString(R.string.name)+": "+ character.names!!
+            binding.species.text = context.getString(R.string.specie)+": "+character.species!!
+            binding.status.text =context.getString(R.string.status)+": "+ character.status!!
         }
     }
 

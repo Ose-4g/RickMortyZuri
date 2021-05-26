@@ -24,41 +24,4 @@ class MainActivityViewModel:ViewModel()
         RickMortyAPIPagingSource(service)
     }.flow.cachedIn(viewModelScope)
 
-    fun getCharacters()
-    {
-//        val call = service.getResponseForPage()
-//        call.enqueue(object : Callback<Response>{
-//            override fun onFailure(call: Call<Response>, t: Throwable) {
-//                Log.i("retrofit",t.message!!)
-//            }
-//
-//            override fun onResponse(call: Call<Response>, response: retrofit2.Response<Response>) {
-//                if(response.isSuccessful)
-//                {
-//                    val answer = response.body()!!
-//
-//                    for(i in 1..10) {
-//                        Log.i("retrofit2", answer.results[i].names.toString())
-//                    }
-//                }
-//            }
-//
-//        })
-
-//        viewModelScope.launch{
-//
-//            val response:Response<ApiResponse> = service.getResponseForPage(2)
-//            if(response.isSuccessful)
-//            {
-//                Log.i("retrofit", response.body()?.results?.get(0)?.names.toString())
-//            }
-//            else
-//            {
-//                Log.i("retrofit", response.errorBody().toString())
-//            }
-//
-//        }
-
-
-    }
 }
